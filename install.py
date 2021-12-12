@@ -1,6 +1,6 @@
 from Cython.Build.BuildExecutable import *
 import sys, os
-name = os.path.splitext(sys.argv[1])
+name = os.path.splitext(sys.argv[1])[0]
 ccompile(name)
 clink(name)
 os.remove(name+".o")
